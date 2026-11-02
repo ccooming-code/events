@@ -43,6 +43,8 @@ header p b{color:var(--fg);font-weight:600}
 .chip{font:inherit;font-size:13px;font-weight:600;border:1px solid var(--line);background:var(--surface);color:var(--fg);
   border-radius:999px;padding:5px 12px;cursor:pointer}
 .chip[aria-pressed="true"]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.chips.sub{padding-left:10px;border-left:2px solid var(--line)}
+.chips.sub .chip{font-size:12px;padding:4px 10px}
 .chip:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .chip .n{font-family:var(--f-mono);font-size:11px;opacity:.7;margin-left:4px}
 .status{font-size:12px;color:var(--muted);min-height:1em}
@@ -97,15 +99,17 @@ footer{margin-top:28px;font-size:12px;color:var(--muted)}
     <div class="chips" role="group" aria-label="분야">
       <button class="chip" id="c-all" data-cat="all" aria-pressed="true">전체<span class="n" id="n-all"></span></button>
       <button class="chip" id="c-popup" data-cat="popup" aria-pressed="false">팝업<span class="n" id="n-popup"></span></button>
-      <button class="chip" id="c-expo" data-cat="expo" aria-pressed="false">박람회·전시<span class="n" id="n-expo"></span></button>
-      <button class="chip" id="c-culture" data-cat="culture" aria-pressed="false">문화·페스티벌<span class="n" id="n-culture"></span></button>
+      <button class="chip" id="c-expo" data-cat="expo" aria-pressed="false">박람회 및 전시<span class="n" id="n-expo"></span></button>
+      <button class="chip" id="c-culture" data-cat="culture" aria-pressed="false">문화 및 페스티벌<span class="n" id="n-culture"></span></button>
     </div>
     <div class="chips" role="group" aria-label="지역">
-      <button class="chip" id="r-all" data-region="all" aria-pressed="true">전 지역</button>
+      <button class="chip" id="r-all" data-region="all" aria-pressed="true">전체<span class="n" id="n-r-all"></span></button>
+      <button class="chip" id="r-seoul" data-region="seoul" aria-pressed="false">서울<span class="n" id="n-seoul"></span></button>
+      <button class="chip" id="r-gyeonggi" data-region="gyeonggi" aria-pressed="false">경기도<span class="n" id="n-gyeonggi"></span></button>
       <button class="chip" id="r-home" data-region="home" aria-pressed="false">성남·광주·용인<span class="n" id="n-home"></span></button>
-      <button class="chip" id="r-local" data-region="local" aria-pressed="false">서울·경기<span class="n" id="n-local"></span></button>
-      <button class="chip" id="r-national" data-region="national" aria-pressed="false">그 외 지역 주목<span class="n" id="n-national"></span></button>
+      <button class="chip" id="r-national" data-region="national" aria-pressed="false">그 외 지역<span class="n" id="n-national"></span></button>
     </div>
+    <div class="chips sub" role="group" aria-label="서울 세부 지역" id="districts" hidden></div>
     <div class="chips" role="group" aria-label="보기">
       <button class="chip" id="v-new" data-view="new" aria-pressed="false">새로 추가된 것만</button>
       <button class="chip" id="v-rsv" data-view="rsv" aria-pressed="false">사전예약 있는 것만</button>
@@ -124,11 +128,41 @@ footer{margin-top:28px;font-size:12px;color:var(--muted)}
 (function(){
   const CAT = {popup:"팝업", expo:"박람회·전시", culture:"문화·페스티벌"};
   const WD = ["일","월","화","수","목","금","토"];
-  let all = [], cat = "all", region = "all", onlyNew = false, onlyRsv = false;
+  let all = [], cat = "all", region = "all", district = "all", onlyNew = false, onlyRsv = false;
   const scopeOf = e => e.scope === "national" ? "national" : "local";
-  const HOME_RE = /성남|분당|판교|수정구|중원구|정자|서현|야탑|모란|위례|광주시|경기 광주|곤지암|오포|퇴촌|초월|남한산성|용인|수지|기흥|처인|동백|죽전|보정|에버랜드/;
-  const isHome = e => e.home === true || (scopeOf(e)==="local" && HOME_RE.test((e.area||"")+" "+(e.venue||"")));
-  const inReg = (e, r) => r==="all" || (r==="home" ? isHome(e) : scopeOf(e)===r);
+  const HOME_RE = /성남|분당|판교|수정구|중원구|정자|서현|야탑|모란|위례|광주시|광주 |곤지암|오포|퇴촌|초월|도척|남한산성|화담숲|용인|수지|기흥|처인|동백|죽전|보정|에버랜드/;
+  const GG_RE = /성남|분당|판교|광주|곤지암|용인|수지|기흥|처인|하남|고양|일산|킨텍스|수원|파주|부천|안양|과천|광명|남양주|구리|의정부|화성|동탄|평택|시흥|김포|안산|군포|의왕|이천|여주|양평|가평|포천|양주|오산|안성/;
+  /* Seoul districts, in display order; first match wins */
+  const DISTRICTS = [
+    ["성수", /성수|서울숲|뚝섬/],
+    ["홍대·연남", /홍대|연남|합정|망원|상수/],
+    ["용산·한남", /용산|한남|이태원|해방촌|아이파크몰/],
+    ["여의도·영등포", /여의도|더현대|IFC|영등포|타임스퀘어|문래/],
+    ["잠실", /잠실|롯데월드|송파|석촌/],
+    ["삼성·코엑스", /삼성동|코엑스|대치|세텍|SETEC|봉은사/],
+    ["강남·서초", /강남|신사|압구정|도산|청담|가로수|반포|서초|양재|논현|역삼|aT센터/],
+    ["종로·광화문", /종로|광화문|청계|인사동|익선|북촌|서촌|을지로|명동|DDP|동대문|성북|혜화|대학로/],
+  ];
+  const textOf = e => (e.area||"")+" "+(e.venue||"");
+  const isHome = e => e.home === true || (scopeOf(e)==="local" && HOME_RE.test(textOf(e)));
+  function regionOf(e){
+    if(e.region === "seoul" || e.region === "gyeonggi" || e.region === "national") return e.region;
+    if(scopeOf(e)==="national") return "national";
+    if(isHome(e)) return "gyeonggi";
+    const t = textOf(e);
+    if(GG_RE.test(e.area||"")) return "gyeonggi";
+    if(/인천/.test(t)) return "national";
+    return "seoul";
+  }
+  function districtOf(e){
+    if(regionOf(e)!=="seoul") return "";
+    if(e.district && DISTRICTS.some(d=>d[0]===e.district)) return e.district;
+    const t = textOf(e);
+    for(const [name, re] of DISTRICTS) if(re.test(t)) return name;
+    return "기타 서울";
+  }
+  const inReg = (e, r) => r==="all" || (r==="home" ? isHome(e) : regionOf(e)===r);
+  const inDist = e => region!=="seoul" || district==="all" || districtOf(e)===district;
 
   function todayKST(){
     const d = new Date(Date.now() + 9*3600e3);
@@ -150,6 +184,8 @@ footer{margin-top:28px;font-size:12px;color:var(--muted)}
     const tags = [`<span class="tag cat-${esc(e.category)}">${esc(CAT[e.category]||"기타")}</span>`];
     if(scopeOf(e)==="national") tags.push(`<span class="tag far">${esc(e.area||"지방")}</span>`);
     else if(isHome(e)) tags.push(`<span class="tag home">우리 동네 · ${esc(e.area||"")}</span>`);
+    else if(regionOf(e)==="seoul") tags.push(`<span class="tag">${esc(districtOf(e))}</span>`);
+    else tags.push(`<span class="tag">경기 · ${esc(e.area||"")}</span>`);
     if(isNew(e)) tags.push(`<span class="tag new">NEW</span>`);
     if(live) tags.push(`<span class="tag live">진행 중</span>`);
     else if(dd!==null) tags.push(`<span class="tag">D-${dd}</span>`);
@@ -172,15 +208,18 @@ footer{margin-top:28px;font-size:12px;color:var(--muted)}
   function render(){
     const today = todayKST();
     const active = all.filter(e => (e.end||e.start||"9999") >= today);
-    const inRegion = active.filter(e => inReg(e, region));
+    const inRegion = active.filter(e => inReg(e, region) && inDist(e));
     ["all","popup","expo","culture"].forEach(k=>{
       const n = k==="all"?inRegion.length:inRegion.filter(e=>e.category===k).length;
       document.getElementById("n-"+k).textContent = n||"";
     });
-    ["home","local","national"].forEach(k=>{
-      const n = active.filter(e=>(cat==="all"||e.category===cat) && inReg(e,k)).length;
+    const inCat = active.filter(e=>cat==="all"||e.category===cat);
+    document.getElementById("n-r-all").textContent = inCat.length||"";
+    ["seoul","gyeonggi","home","national"].forEach(k=>{
+      const n = inCat.filter(e=>inReg(e,k)).length;
       document.getElementById("n-"+k).textContent = n||"";
     });
+    renderDistricts(inCat);
     let list = inRegion.filter(e => cat==="all" || e.category===cat);
     if(onlyNew) list = list.filter(isNew);
     if(onlyRsv) list = list.filter(e => e.reservationUrl || e.reservationOpen || (e.reservation && !/예약 없음|현장 입장|현장 방문|무료, 현장/.test(e.reservation)));
@@ -205,8 +244,23 @@ footer{margin-top:28px;font-size:12px;color:var(--muted)}
     document.querySelectorAll("[data-cat].chip").forEach(x=>x.setAttribute("aria-pressed",String(x===b)));
     render();
   }));
+  function renderDistricts(inCat){
+    const box = document.getElementById("districts");
+    if(region!=="seoul"){ box.hidden = true; district = "all"; return; }
+    const seoul = inCat.filter(e=>regionOf(e)==="seoul");
+    const names = DISTRICTS.map(d=>d[0]).concat(["기타 서울"]);
+    const counts = Object.fromEntries(names.map(n=>[n, seoul.filter(e=>districtOf(e)===n).length]));
+    if(district!=="all" && !counts[district]) district = "all";
+    box.innerHTML = [["all","서울 전체",seoul.length]].concat(names.filter(n=>counts[n]).map(n=>[n,n,counts[n]]))
+      .map(([v,label,n])=>`<button class="chip" data-district="${esc(v)}" aria-pressed="${v===district}">${esc(label)}<span class="n">${n}</span></button>`).join("");
+    box.hidden = false;
+  }
+  document.getElementById("districts").addEventListener("click", ev=>{
+    const b = ev.target.closest("[data-district]"); if(!b) return;
+    district = b.dataset.district; render();
+  });
   document.querySelectorAll("[data-region].chip").forEach(b=>b.addEventListener("click",()=>{
-    region=b.dataset.region;
+    region=b.dataset.region; district="all";
     document.querySelectorAll("[data-region].chip").forEach(x=>x.setAttribute("aria-pressed",String(x===b)));
     render();
   }));
