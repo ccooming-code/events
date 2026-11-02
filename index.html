@@ -56,6 +56,13 @@ header p b{color:var(--fg);font-weight:600}
 .chips.place .chip[aria-pressed="true"]{background:var(--accent-soft);color:var(--accent);border-color:var(--accent)}
 .chips.place .chip[aria-pressed="true"]::before{background:var(--accent)}
 .chips.place.sub .chip{font-size:12px;padding:3px 9px}
+/* 분야: hashtag-style text chips, underlined when on */
+.chips.theme{gap:4px 12px}
+.chips.theme .chip{border:0;background:transparent;border-radius:0;padding:4px 0;color:var(--muted);font-weight:600;border-bottom:2px solid transparent}
+.chips.theme .chip::before{content:"#";margin-right:1px;opacity:.6}
+.chips.theme .chip[data-theme="all"]::before{content:""}
+.chips.theme .chip[aria-pressed="true"]{background:transparent;color:var(--fg);border-bottom-color:var(--fg)}
+.tag.theme{background:transparent;color:var(--muted);padding-left:0}
 /* 보기: checkbox-style toggles */
 .chips.view .chip{border:0;background:transparent;padding:4px 2px;font-weight:600;color:var(--muted)}
 .chips.view .chip::before{content:"";display:inline-block;width:12px;height:12px;border:1.5px solid var(--muted);border-radius:3px;margin-right:6px;vertical-align:-2px}
@@ -121,6 +128,9 @@ footer{margin-top:28px;font-size:12px;color:var(--muted)}
       <button class="chip" id="c-culture" data-cat="culture" aria-pressed="false">문화 및 페스티벌<span class="n" id="n-culture"></span></button>
     </div>
     </div>
+    <div class="frow"><span class="flabel">분야</span>
+    <div class="chips theme" role="group" aria-label="분야" id="themes"></div>
+    </div>
     <div class="frow"><span class="flabel">지역</span>
     <div class="chips place" role="group" aria-label="지역">
       <button class="chip" id="r-all" data-region="all" aria-pressed="true">전체<span class="n" id="n-r-all"></span></button>
@@ -153,7 +163,7 @@ footer{margin-top:28px;font-size:12px;color:var(--muted)}
 (function(){
   const CAT = {popup:"팝업", expo:"박람회·전시", culture:"문화·페스티벌"};
   const WD = ["일","월","화","수","목","금","토"];
-  let all = [], cat = "all", region = "all", district = "all", onlyNew = false, onlyRsv = false;
+  let all = [], cat = "all", region = "all", district = "all", theme = "all", onlyNew = false, onlyRsv = false;
   const scopeOf = e => e.scope === "national" ? "national" : "local";
   const HOME_RE = /성남|분당|판교|수정구|중원구|정자|서현|야탑|모란|위례|광주시|광주 |곤지암|오포|퇴촌|초월|도척|남한산성|화담숲|용인|수지|기흥|처인|동백|죽전|보정|에버랜드/;
   const GG_RE = /성남|분당|판교|광주|곤지암|용인|수지|기흥|처인|하남|고양|일산|킨텍스|수원|파주|부천|안양|과천|광명|남양주|구리|의정부|화성|동탄|평택|시흥|김포|안산|군포|의왕|이천|여주|양평|가평|포천|양주|오산|안성/;
@@ -186,6 +196,28 @@ footer{margin-top:28px;font-size:12px;color:var(--muted)}
     for(const [name, re] of DISTRICTS) if(re.test(t)) return name;
     return "기타 서울";
   }
+  /* 분야 (theme). Match order resolves overlaps; title is checked before summary. */
+  const THEMES = [
+    ["캐릭터·애니", /캐릭터|애니|짱구|산리오|포켓몬|코난|주술회전|쿠로코|봇치|명일방주|아크나이츠|드래곤볼|카드캡터|러브라이브|에반게리온|스누피|태권\s?V|태권브이|PEACH-PIT|피치피트|핫토이|피규어|레고|AGF|웹툰|만화|애니메이트|해리포터|조이프렌즈|조앤프렌즈|카카오프렌즈|디즈니|마블|원피스|나루토|헬로키티|시나모롤|쿠로미|가차|가챠|재혼황후|타네무라/i],
+    ["게임", /게임|지스타|G-STAR|스위치|닌텐도|니케|e스포츠|월즈|Worlds|라이엇|PlayStation|플레이스테이션|넥슨|넷마블|보드게임/i],
+    ["뷰티", /뷰티|화장품|코스메틱|롬앤|레티놀|스킨케어|향수|퍼퓸|Parfum|올리브영|메이크업|바이탈뷰티|에이피 뷰티|리바이포유|오푸리스|립스틱|쿠션|네일|헤어|그립비/i],
+    ["푸드·디저트", /푸드|디저트|카페쇼|커피|빵|베이커리|피자|김밥|국밥|맛집|빼빼로|스위트파크|먹거리|식품|위스키|캐스크|와인|주류|맥주|밀크티|초콜릿|쿠키|케이크|도넛|라면|떡볶이|과자|사과축제|바게트|미니도우/],
+    ["패션", /패션|의류|아우터|슈즈|스니커즈|챔피온|코치|무신사 스토어|베어파우|노스페이스|던스트|에쿠아|프리버|에세이즈|EQL|가방|주얼리|안경|아이웨어|룩북|실리언/],
+    ["음악·공연", /콘서트|음악|뮤직|뮤지컬|오페라|오케스트라|필하모|재즈|악극|발레|합창|밴드|레코드|스포티파이|Spotify|리사이틀|자우림|어서옵SHOW|주현미|아이돌|예술인|보이넥스트도어|디페스타|DFESTA|공연/i],
+    ["아트·디자인", /전시|아트|미술|디자인|건축|일러스트|사진전|갤러리|공예|그림책|콘텐츠/],
+    ["축제·마켓", /축제|페스타|페스티벌|festival|마켓|불꽃|빛|장터|플리|마실|걷기|올레|단풍|H빌리지/i],
+    ["라이프·리빙", /리빙|인테리어|여행|트래블|베이비|육아|유아|반려|펫|동물|메가주|웨딩|캠핑|가전|파나소닉|LG|문구|레일|아카이브|모터스튜디오|자동차/],
+  ];
+  /* display order of the filter chips */
+  const THEME_NAMES = ["뷰티","패션","푸드·디저트","캐릭터·애니","게임","음악·공연","아트·디자인","축제·마켓","라이프·리빙","기타"];
+  function themeOf(e){
+    if(e.theme && THEME_NAMES.includes(e.theme)) return e.theme;
+    const title = e.title||"";
+    for(const [name, re] of THEMES) if(re.test(title)) return name;
+    const rest = (e.summary||"")+" "+(e.venue||"");
+    for(const [name, re] of THEMES) if(re.test(rest)) return name;
+    return "기타";
+  }
   const inReg = (e, r) => r==="all" || (r==="home" ? isHome(e) : regionOf(e)===r);
   const inDist = e => region!=="seoul" || district==="all" || districtOf(e)===district;
 
@@ -207,6 +239,7 @@ footer{margin-top:28px;font-size:12px;color:var(--muted)}
     const show = live ? today : start;
     if(show){ const [y,mm,dd2]=show.split("-"); m=`${+mm}월`; d=+dd2; w=WD[new Date(show+"T00:00:00Z").getUTCDay()]+(live?" · 오늘":""); }
     const tags = [`<span class="tag cat-${esc(e.category)}">${esc(CAT[e.category]||"기타")}</span>`];
+    if(themeOf(e)!=="기타") tags.push(`<span class="tag theme">#${esc(themeOf(e))}</span>`);
     if(scopeOf(e)==="national") tags.push(`<span class="tag far">${esc(e.area||"지방")}</span>`);
     else if(isHome(e)) tags.push(`<span class="tag home">우리 동네 · ${esc(e.area||"")}</span>`);
     else if(regionOf(e)==="seoul") tags.push(`<span class="tag">${esc(districtOf(e))}</span>`);
@@ -233,12 +266,14 @@ footer{margin-top:28px;font-size:12px;color:var(--muted)}
   function render(){
     const today = todayKST();
     const active = all.filter(e => (e.end||e.start||"9999") >= today);
-    const inRegion = active.filter(e => inReg(e, region) && inDist(e));
+    const inTheme = e => theme==="all" || themeOf(e)===theme;
+    const inRegion = active.filter(e => inReg(e, region) && inDist(e) && inTheme(e));
     ["all","popup","expo","culture"].forEach(k=>{
       const n = k==="all"?inRegion.length:inRegion.filter(e=>e.category===k).length;
       document.getElementById("n-"+k).textContent = n||"";
     });
-    const inCat = active.filter(e=>cat==="all"||e.category===cat);
+    renderThemes(active.filter(e=>(cat==="all"||e.category===cat) && inReg(e,region) && inDist(e)));
+    const inCat = active.filter(e=>(cat==="all"||e.category===cat) && inTheme(e));
     document.getElementById("n-r-all").textContent = inCat.length||"";
     ["seoul","gyeonggi","home","national"].forEach(k=>{
       const n = inCat.filter(e=>inReg(e,k)).length;
@@ -269,6 +304,17 @@ footer{margin-top:28px;font-size:12px;color:var(--muted)}
     document.querySelectorAll("[data-cat].chip").forEach(x=>x.setAttribute("aria-pressed",String(x===b)));
     render();
   }));
+  function renderThemes(pool){
+    const box = document.getElementById("themes");
+    const counts = Object.fromEntries(THEME_NAMES.map(n=>[n, pool.filter(e=>themeOf(e)===n).length]));
+    if(theme!=="all" && !counts[theme]) theme = "all";
+    box.innerHTML = [["all","전체",pool.length]].concat(THEME_NAMES.filter(n=>counts[n]).map(n=>[n,n,counts[n]]))
+      .map(([v,label,n])=>`<button class="chip" data-theme="${esc(v)}" aria-pressed="${v===theme}">${esc(label)}<span class="n">${n}</span></button>`).join("");
+  }
+  document.getElementById("themes").addEventListener("click", ev=>{
+    const b = ev.target.closest("[data-theme]"); if(!b) return;
+    theme = b.dataset.theme; render();
+  });
   function renderDistricts(inCat){
     const box = document.getElementById("districts");
     const row = document.getElementById("districtRow");
