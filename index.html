@@ -43,8 +43,25 @@ header p b{color:var(--fg);font-weight:600}
 .chip{font:inherit;font-size:13px;font-weight:600;border:1px solid var(--line);background:var(--surface);color:var(--fg);
   border-radius:999px;padding:5px 12px;cursor:pointer}
 .chip[aria-pressed="true"]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
-.chips.sub{padding-left:10px;border-left:2px solid var(--line)}
-.chips.sub .chip{font-size:12px;padding:4px 10px}
+/* filter rows: label on the left, a distinct shape per group */
+.frow{display:flex;align-items:flex-start;gap:10px}
+.flabel{flex:0 0 34px;padding-top:6px;font-size:11px;font-weight:800;letter-spacing:.06em;color:var(--muted)}
+.frow .chips{flex:1;min-width:0}
+/* 유형: round pills, filled when on */
+.chips.type .chip{border-radius:999px}
+.chips.type .chip[aria-pressed="true"]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+/* 지역: squared tabs with a pin mark, accent outline when on */
+.chips.place .chip{border-radius:6px;background:transparent}
+.chips.place .chip::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--line);margin-right:6px;vertical-align:middle}
+.chips.place .chip[aria-pressed="true"]{background:var(--accent-soft);color:var(--accent);border-color:var(--accent)}
+.chips.place .chip[aria-pressed="true"]::before{background:var(--accent)}
+.chips.place.sub .chip{font-size:12px;padding:3px 9px}
+/* 보기: checkbox-style toggles */
+.chips.view .chip{border:0;background:transparent;padding:4px 2px;font-weight:600;color:var(--muted)}
+.chips.view .chip::before{content:"";display:inline-block;width:12px;height:12px;border:1.5px solid var(--muted);border-radius:3px;margin-right:6px;vertical-align:-2px}
+.chips.view .chip[aria-pressed="true"]{background:transparent;color:var(--fg)}
+.chips.view .chip[aria-pressed="true"]::before{background:var(--fg);border-color:var(--fg);box-shadow:inset 0 0 0 2px var(--bg)}
+.chips.view{gap:14px}
 .chip:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .chip .n{font-family:var(--f-mono);font-size:11px;opacity:.7;margin-left:4px}
 .status{font-size:12px;color:var(--muted);min-height:1em}
@@ -96,23 +113,31 @@ footer{margin-top:28px;font-size:12px;color:var(--muted)}
   </header>
 
   <div class="bar">
-    <div class="chips" role="group" aria-label="분야">
+    <div class="frow"><span class="flabel">유형</span>
+    <div class="chips type" role="group" aria-label="유형">
       <button class="chip" id="c-all" data-cat="all" aria-pressed="true">전체<span class="n" id="n-all"></span></button>
       <button class="chip" id="c-popup" data-cat="popup" aria-pressed="false">팝업<span class="n" id="n-popup"></span></button>
       <button class="chip" id="c-expo" data-cat="expo" aria-pressed="false">박람회 및 전시<span class="n" id="n-expo"></span></button>
       <button class="chip" id="c-culture" data-cat="culture" aria-pressed="false">문화 및 페스티벌<span class="n" id="n-culture"></span></button>
     </div>
-    <div class="chips" role="group" aria-label="지역">
+    </div>
+    <div class="frow"><span class="flabel">지역</span>
+    <div class="chips place" role="group" aria-label="지역">
       <button class="chip" id="r-all" data-region="all" aria-pressed="true">전체<span class="n" id="n-r-all"></span></button>
       <button class="chip" id="r-seoul" data-region="seoul" aria-pressed="false">서울<span class="n" id="n-seoul"></span></button>
       <button class="chip" id="r-gyeonggi" data-region="gyeonggi" aria-pressed="false">경기도<span class="n" id="n-gyeonggi"></span></button>
       <button class="chip" id="r-home" data-region="home" aria-pressed="false">성남·광주·용인<span class="n" id="n-home"></span></button>
       <button class="chip" id="r-national" data-region="national" aria-pressed="false">그 외 지역<span class="n" id="n-national"></span></button>
     </div>
-    <div class="chips sub" role="group" aria-label="서울 세부 지역" id="districts" hidden></div>
-    <div class="chips" role="group" aria-label="보기">
+    </div>
+    <div class="frow" id="districtRow" hidden><span class="flabel">서울</span>
+    <div class="chips place sub" role="group" aria-label="서울 세부 지역" id="districts"></div>
+    </div>
+    <div class="frow"><span class="flabel">보기</span>
+    <div class="chips view" role="group" aria-label="보기">
       <button class="chip" id="v-new" data-view="new" aria-pressed="false">새로 추가된 것만</button>
       <button class="chip" id="v-rsv" data-view="rsv" aria-pressed="false">사전예약 있는 것만</button>
+    </div>
     </div>
     <div class="status" id="status">불러오는 중…</div>
   </div>
@@ -246,14 +271,15 @@ footer{margin-top:28px;font-size:12px;color:var(--muted)}
   }));
   function renderDistricts(inCat){
     const box = document.getElementById("districts");
-    if(region!=="seoul"){ box.hidden = true; district = "all"; return; }
+    const row = document.getElementById("districtRow");
+    if(region!=="seoul"){ row.hidden = true; district = "all"; return; }
     const seoul = inCat.filter(e=>regionOf(e)==="seoul");
     const names = DISTRICTS.map(d=>d[0]).concat(["기타 서울"]);
     const counts = Object.fromEntries(names.map(n=>[n, seoul.filter(e=>districtOf(e)===n).length]));
     if(district!=="all" && !counts[district]) district = "all";
     box.innerHTML = [["all","서울 전체",seoul.length]].concat(names.filter(n=>counts[n]).map(n=>[n,n,counts[n]]))
       .map(([v,label,n])=>`<button class="chip" data-district="${esc(v)}" aria-pressed="${v===district}">${esc(label)}<span class="n">${n}</span></button>`).join("");
-    box.hidden = false;
+    row.hidden = false;
   }
   document.getElementById("districts").addEventListener("click", ev=>{
     const b = ev.target.closest("[data-district]"); if(!b) return;
