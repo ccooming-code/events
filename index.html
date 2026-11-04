@@ -43,6 +43,20 @@ header p b{color:var(--fg);font-weight:600}
 .chip{font:inherit;font-size:13px;font-weight:600;border:1px solid var(--line);background:var(--surface);color:var(--fg);
   border-radius:999px;padding:5px 12px;cursor:pointer}
 .chip[aria-pressed="true"]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+/* collapsible filter header */
+.ftoggle-row{display:flex;align-items:center;gap:8px}
+.ftoggle{flex:1;min-width:0;display:flex;align-items:center;gap:8px;font:inherit;background:transparent;border:0;padding:4px 0;color:var(--fg);cursor:pointer;text-align:left}
+.ftoggle:focus-visible,.freset:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
+.ft-label{flex:0 0 auto;font-size:12px;font-weight:800;letter-spacing:.06em}
+.ft-sum{flex:1;min-width:0;font-size:13px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ft-sum b{color:var(--fg);font-weight:700}
+.ft-count{flex:0 0 auto;font-family:var(--f-mono);font-size:12px;color:var(--muted)}
+.ft-caret{flex:0 0 auto;width:7px;height:7px;margin:0 4px 3px 2px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:rotate(45deg);transition:transform .15s}
+.ftoggle[aria-expanded="true"] .ft-caret{transform:rotate(-135deg);margin-bottom:-3px}
+.freset{flex:0 0 auto;font:inherit;font-size:12px;font-weight:600;border:1px solid var(--line);background:var(--surface);color:var(--fg);border-radius:6px;padding:3px 9px;cursor:pointer}
+.fpanel{display:flex;flex-direction:column;gap:8px}
+.bar.collapsed{padding-block:10px 8px;gap:4px}
+@media (prefers-reduced-motion:reduce){.ft-caret{transition:none}}
 /* filter rows: label on the left, a distinct shape per group */
 .frow{display:flex;align-items:flex-start;gap:10px}
 .flabel{flex:0 0 34px;padding-top:6px;font-size:11px;font-weight:800;letter-spacing:.06em;color:var(--muted)}
@@ -116,10 +130,17 @@ footer{margin-top:28px;font-size:12px;color:var(--muted)}
 <div class="wrap">
   <header>
     <h1>팝업·박람회·행사 보드</h1>
-    <p>팝업스토어 · 박람회·전시 · 문화·페스티벌. 서울·경기 전체와 그 외 지역의 주목할 만한 행사가 하루 두 번(07:47 · 18:47) 자동으로 모입니다. <b id="lastUpd"></b></p>
+    <p>팝업스토어 · 박람회·전시 · 문화·페스티벌. 서울·경기 전체와 그 외 지역의 주목할 만한 행사가 하루 두 번(07:47 · 14:47) 자동으로 모입니다. <b id="lastUpd"></b></p>
   </header>
 
   <div class="bar">
+    <div class="ftoggle-row">
+      <button class="ftoggle" id="fToggle" type="button" aria-expanded="true" aria-controls="fPanel">
+        <span class="ft-label">필터</span><span class="ft-sum" id="fSummary">전체</span><span class="ft-count" id="fCount"></span><span class="ft-caret" aria-hidden="true"></span>
+      </button>
+      <button class="freset" id="fReset" type="button" hidden>초기화</button>
+    </div>
+    <div class="fpanel" id="fPanel">
     <div class="frow"><span class="flabel">유형</span>
     <div class="chips type" role="group" aria-label="유형">
       <button class="chip" id="c-all" data-cat="all" aria-pressed="true">전체<span class="n" id="n-all"></span></button>
@@ -147,6 +168,7 @@ footer{margin-top:28px;font-size:12px;color:var(--muted)}
     <div class="chips view" role="group" aria-label="보기">
       <button class="chip" id="v-new" data-view="new" aria-pressed="false">새로 추가된 것만</button>
       <button class="chip" id="v-rsv" data-view="rsv" aria-pressed="false">사전예약 있는 것만</button>
+    </div>
     </div>
     </div>
     <div class="status" id="status">불러오는 중…</div>
@@ -283,6 +305,7 @@ footer{margin-top:28px;font-size:12px;color:var(--muted)}
     let list = inRegion.filter(e => cat==="all" || e.category===cat);
     if(onlyNew) list = list.filter(isNew);
     if(onlyRsv) list = list.filter(e => e.reservationUrl || e.reservationOpen || (e.reservation && !/예약 없음|현장 입장|현장 방문|무료, 현장/.test(e.reservation)));
+    updateSummary(list.length);
     const main = document.getElementById("main");
     if(!list.length){
       main.innerHTML = `<div class="empty"><strong>${all.length?"조건에 맞는 행사가 없어요":"아직 모인 행사가 없어요"}</strong>${all.length?"다른 분야나 보기를 선택해 보세요.":"정기 알림이 실행될 때마다 찾은 행사가 여기에 쌓입니다."}</div>`;
@@ -304,6 +327,41 @@ footer{margin-top:28px;font-size:12px;color:var(--muted)}
     document.querySelectorAll("[data-cat].chip").forEach(x=>x.setAttribute("aria-pressed",String(x===b)));
     render();
   }));
+  const REGION_LABEL = {seoul:"서울", gyeonggi:"경기도", home:"성남·광주·용인", national:"그 외 지역"};
+  function updateSummary(n){
+    const parts = [];
+    if(cat!=="all") parts.push(CAT[cat]);
+    if(theme!=="all") parts.push("#"+theme);
+    if(region!=="all") parts.push(REGION_LABEL[region] + (region==="seoul" && district!=="all" ? " › "+district : ""));
+    if(onlyNew) parts.push("새로 추가");
+    if(onlyRsv) parts.push("사전예약");
+    const sum = document.getElementById("fSummary");
+    sum.innerHTML = parts.length ? parts.map(p=>`<b>${esc(p)}</b>`).join(" · ") : "전체 보기";
+    document.getElementById("fCount").textContent = n + "개";
+    document.getElementById("fReset").hidden = !parts.length;
+  }
+  const bar = document.querySelector(".bar"), panel = document.getElementById("fPanel"), fToggle = document.getElementById("fToggle");
+  function setOpen(open, remember){
+    panel.hidden = !open;
+    bar.classList.toggle("collapsed", !open);
+    fToggle.setAttribute("aria-expanded", String(open));
+    if(remember){ try{ localStorage.setItem("filtersOpen", open ? "1" : "0"); }catch(_){} }
+  }
+  (function initOpen(){
+    let saved = null;
+    try{ saved = localStorage.getItem("filtersOpen"); }catch(_){}
+    const narrow = window.matchMedia && window.matchMedia("(max-width: 640px)").matches;
+    setOpen(saved===null ? !narrow : saved==="1", false);
+  })();
+  fToggle.addEventListener("click", ()=> setOpen(panel.hidden, true));
+  document.getElementById("fReset").addEventListener("click", ()=>{
+    cat="all"; theme="all"; region="all"; district="all"; onlyNew=false; onlyRsv=false;
+    document.querySelectorAll("[data-cat].chip").forEach(x=>x.setAttribute("aria-pressed", String(x.dataset.cat==="all")));
+    document.querySelectorAll("[data-region].chip").forEach(x=>x.setAttribute("aria-pressed", String(x.dataset.region==="all")));
+    document.getElementById("v-new").setAttribute("aria-pressed","false");
+    document.getElementById("v-rsv").setAttribute("aria-pressed","false");
+    render();
+  });
   function renderThemes(pool){
     const box = document.getElementById("themes");
     const counts = Object.fromEntries(THEME_NAMES.map(n=>[n, pool.filter(e=>themeOf(e)===n).length]));
