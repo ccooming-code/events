@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-04T23:25:00Z",
+ "generatedAt": "2026-11-05T03:18:11Z",
  "events": [
   {
    "area": "부산",
@@ -3029,6 +3029,25 @@
    "id": "sn-panasonic-beauty-pangyo-popup-202611"
   },
   {
+   "id": "sn-photo-contest-41-2026",
+   "area": "성남 수정",
+   "category": "culture",
+   "end": "2026-11-07",
+   "firstSeen": "2026-11-05T03:17:20Z",
+   "highlight": true,
+   "home": true,
+   "reservation": "무료, 현장 입장",
+   "reservationOpen": "",
+   "reservationUrl": "",
+   "scope": "local",
+   "start": "2026-11-03",
+   "summary": "10:00~17:00, 무료. 성남예총 주최 공모 사진전 입상작 전시, 시상식 11/6 15:00 소극장",
+   "title": "제41회 성남사진대전 전시회",
+   "updated": "2026-11-05T03:17:20Z",
+   "url": "https://www.seongnam.go.kr/pm010201/6533",
+   "venue": "성남아트리움 갤러리홀"
+  },
+  {
    "area": "성남 판교",
    "category": "popup",
    "end": "2027-01-21",
@@ -3651,6 +3670,25 @@
    "id": "yi-children-choir-48th-2026"
   },
   {
+   "id": "yi-choi-sobin-ballet-nutcracker-2026",
+   "area": "용인 처인",
+   "category": "culture",
+   "end": "2026-12-03",
+   "firstSeen": "2026-11-05T03:17:20Z",
+   "highlight": false,
+   "home": true,
+   "reservation": "NOL티켓 단독판매, 용인시민 50% 등 할인(증빙), 전일 17시까지. 10/30 14시 오픈 공지지만 NOL 페이지에 '예매대기' 표시라 판매 상태 확인 필요",
+   "reservationOpen": "2026-10-30T14:00",
+   "reservationUrl": "https://nol.yanolja.com/ticket/products/26015610",
+   "scope": "local",
+   "start": "2026-12-03",
+   "summary": "12/3(목) 19:00, 100분(인터미션 15분), 만 48개월 이상. 전석 20,000원",
+   "title": "최소빈발레단 〈호두까기인형〉 - 용인",
+   "updated": "2026-11-05T03:17:20Z",
+   "url": "https://www.yongin.go.kr/partInfo/cultureArt/BD_selectCultureArt.do?q_showIdx=16990&q_year=2026&q_month=12",
+   "venue": "용인시문예회관 처인홀"
+  },
+  {
    "area": "용인 수지",
    "category": "popup",
    "end": "2026-11-30",
@@ -3788,14 +3826,14 @@
    "firstSeen": "2026-11-02T06:40:00Z",
    "highlight": false,
    "home": true,
-   "reservation": "관람 무료, 별도 예약 없음. 11/3부터 용인문화재단 홈페이지 사전 댓글 이벤트로 캠핑석 선착순 200명, 당일 기념품 800명",
+   "reservation": "관람 무료, 현장 입장. 사전 댓글 이벤트(캠핑석)는 마감, 현장 객석 마련",
    "reservationOpen": "",
    "scope": "local",
    "start": "2026-11-14",
    "summary": "18:30 본공연. 김완선·하남석 출연, 김미화 사회. 14시부터 시민 전시·체험 부스, 16시 상상포럼, 캠핑석 200석",
    "title": "용인시민대중예술인 특집 '가을별빛광장'",
-   "updated": "2026-11-04T05:52:20Z",
-   "url": "https://www.webeconomy.co.kr/news/articleView.html?idxno=2356862",
+   "updated": "2026-11-05T03:17:20Z",
+   "url": "https://www.yicf.or.kr/main/show/view.do?show_type=perform&viewType=img&SHOW_IDX=16986",
    "venue": "용인포은아트홀 야외광장",
    "id": "yi-gaeul-byeolbit-gwangjang-2026"
   },
@@ -3817,6 +3855,25 @@
    "updated": "2026-11-04T03:49:10Z",
    "url": "https://www.yongin.go.kr/partInfo/cultureArt/BD_selectCultureArt.do?q_showIdx=16980&q_year=2026&q_month=11",
    "venue": "용인시문화예술원 대전시실"
+  },
+  {
+   "id": "yi-inwangsan-tiger-martial-play-2026",
+   "area": "용인 수지",
+   "category": "culture",
+   "end": "2026-11-07",
+   "firstSeen": "2026-11-05T03:17:20Z",
+   "highlight": true,
+   "home": true,
+   "reservation": "대관공연, 재단 홈페이지 예매 불가. 요금·입장 방법은 주최 단체 확인 필요 (재단 031-260-3355)",
+   "reservationOpen": "",
+   "reservationUrl": "",
+   "scope": "local",
+   "start": "2026-11-07",
+   "summary": "11/7(토) 15:00, 60분, 전통예술 장르의 창작 무예극. 요금은 확인 필요",
+   "title": "창작무예극 〈인왕산 호랑이〉",
+   "updated": "2026-11-05T03:17:20Z",
+   "url": "https://www.yongin.go.kr/partInfo/cultureArt/BD_selectCultureArt.do?q_showIdx=16754&q_year=2026&q_month=11",
+   "venue": "용인시 평생학습관 큰어울마당"
   },
   {
    "area": "용인 수지",
