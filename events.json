@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-06T07:00:02Z",
+ "generatedAt": "2026-11-06T07:04:10Z",
  "events": [
   {
    "area": "압구정",
@@ -850,6 +850,25 @@
    "url": "https://nol.yanolja.com/ticket/products/26014109",
    "venue": "광주시문화예술의전당 맹사성홀",
    "id": "gj-tenor-choi-wonhyuk-recital-2026"
+  },
+  {
+   "area": "광주 경안",
+   "category": "culture",
+   "end": "2026-11-25",
+   "firstSeen": "2026-11-06T07:01:00Z",
+   "highlight": false,
+   "home": true,
+   "reservation": "무료, 구글폼 사전신청. 정원 차면 마감, 초과 시 대기 등록 (문의 031-762-4137)",
+   "reservationOpen": "",
+   "reservationUrl": "https://forms.gle/eMBVM4ZKwn9Ruvzu8",
+   "scope": "local",
+   "start": "2026-10-21",
+   "summary": "레지던시 작가와 함께하는 무료 예술체험·미술관 투어 (총 14회, 회차당 평일 20명·주말 25명). 유치부~성인, 유치부~초등부는 보호자 동반",
+   "title": "영은미술관 광광(廣光)순례: 추상의 순환 그리고 자연 산책",
+   "updated": "2026-11-06T07:01:00Z",
+   "url": "https://www.gjcity.go.kr/portal/bbs/view.do?bIdx=347847&ptIdx=24&mId=0201030100",
+   "venue": "영은미술관 전시장·교육동 (토요일은 닻미술관 투어 포함)",
+   "id": "gj-yeongeun-gwanggwang-sunrye-2026"
   },
   {
    "area": "괴산",
@@ -2054,7 +2073,6 @@
    "id": "seongsu-champion-popup-202610"
   },
   {
-   "id": "seongsu-chanel-beauty-holiday-popup-2026",
    "area": "성수",
    "category": "popup",
    "end": "2026-12-31",
@@ -2070,7 +2088,8 @@
    "title": "샤넬 뷰티 홀리데이 팝업",
    "updated": "2026-11-04T02:10:00Z",
    "url": "https://www.vogue.co.kr/2026/11/03/%EC%83%A4%EB%84%AC%EC%9D%B4-%EC%B4%88%EB%8C%80%ED%95%98%EB%8A%94-%EC%83%9D%EB%AA%A8%EB%A6%AC%EC%B8%A0%EC%9D%98-%EA%B2%A8%EC%9A%B8",
-   "venue": "서울 성동구 성수이7가길 9"
+   "venue": "서울 성동구 성수이7가길 9",
+   "id": "seongsu-chanel-beauty-holiday-popup-2026"
   },
   {
    "area": "성수",
@@ -2376,6 +2395,24 @@
    "url": "https://www.topstarnews.net/news/articleView.html?idxno=16266953",
    "venue": "연무장7길 16",
    "id": "seongsu-nct-dream-welcome-dreamers-popup-202611"
+  },
+  {
+   "area": "성수",
+   "category": "popup",
+   "end": "",
+   "firstSeen": "2026-11-02T22:55:00Z",
+   "highlight": false,
+   "reservation": "예약 안내 없음",
+   "reservationOpen": "",
+   "reservationUrl": "",
+   "scope": "local",
+   "start": "2026-10-29",
+   "summary": "겨울 설경 LED 포토존과 플라잉77 구스다운 체험. 종료일 확인 필요",
+   "title": "뉴발란스 'NB FLYING77 : Into Nature' 팝업",
+   "updated": "2026-11-02T22:55:00Z",
+   "url": "https://www.webeconomy.co.kr/news/articleView.html?idxno=2356871",
+   "venue": "뉴발란스 성수점",
+   "id": "seongsu-newbalance-flying77-popup-2026"
   },
   {
    "area": "성수",
@@ -3490,7 +3527,6 @@
    "id": "sn-kimjongkook-concert-2026"
   },
   {
-   "id": "sn-kkuljam-drawing-show-20261120",
    "area": "성남 중원",
    "category": "culture",
    "end": "2026-11-20",
@@ -3506,7 +3542,8 @@
    "title": "꿀잼어린이극장 〈오리지널 드로잉쇼〉",
    "updated": "2026-11-04T03:49:10Z",
    "url": "https://www.seongnam.go.kr/pm010201/6556",
-   "venue": "성남시육아종합지원센터 다함께 머뭄터 (양현로 379 지하 1층)"
+   "venue": "성남시육아종합지원센터 다함께 머뭄터 (양현로 379 지하 1층)",
+   "id": "sn-kkuljam-drawing-show-20261120"
   },
   {
    "area": "성남 분당",
@@ -3696,7 +3733,6 @@
    "id": "sn-minidough-pangyo-popup-202610"
   },
   {
-   "id": "sn-mulbit-camerata-crossover-20261114",
    "area": "성남 분당",
    "category": "culture",
    "end": "2026-11-14",
@@ -3712,10 +3748,10 @@
    "title": "성남물빛정원 뮤직홀 〈카메라타 아르스 악티바의 크로스오버〉",
    "updated": "2026-11-04T03:49:10Z",
    "url": "https://www.seongnam.go.kr/pm010201/6527",
-   "venue": "성남물빛정원 뮤직홀"
+   "venue": "성남물빛정원 뮤직홀",
+   "id": "sn-mulbit-camerata-crossover-20261114"
   },
   {
-   "id": "sn-mulbit-limmijung-jazz-20261128",
    "area": "성남 분당",
    "category": "culture",
    "end": "2026-11-28",
@@ -3731,10 +3767,10 @@
    "title": "성남물빛정원 뮤직홀 〈임미정 Autumn in Jazz〉",
    "updated": "2026-11-04T03:49:10Z",
    "url": "https://www.seongnam.go.kr/pm010201/6529",
-   "venue": "성남물빛정원 뮤직홀"
+   "venue": "성남물빛정원 뮤직홀",
+   "id": "sn-mulbit-limmijung-jazz-20261128"
   },
   {
-   "id": "sn-mulbit-passio-quartet-20261121",
    "area": "성남 분당",
    "category": "culture",
    "end": "2026-11-21",
@@ -3750,7 +3786,8 @@
    "title": "성남물빛정원 뮤직홀 〈파씨오 콰르텟의 포레 사중주〉",
    "updated": "2026-11-04T03:49:10Z",
    "url": "https://www.seongnam.go.kr/pm010201/6528",
-   "venue": "성남물빛정원 뮤직홀"
+   "venue": "성남물빛정원 뮤직홀",
+   "id": "sn-mulbit-passio-quartet-20261121"
   },
   {
    "area": "성남 판교",
@@ -3847,7 +3884,6 @@
    "id": "sn-pavoe-eiffel-ak-bundang-202611"
   },
   {
-   "id": "sn-photo-contest-41-2026",
    "area": "성남 수정",
    "category": "culture",
    "end": "2026-11-07",
@@ -3863,7 +3899,8 @@
    "title": "제41회 성남사진대전 전시회",
    "updated": "2026-11-05T03:17:20Z",
    "url": "https://www.seongnam.go.kr/pm010201/6533",
-   "venue": "성남아트리움 갤러리홀"
+   "venue": "성남아트리움 갤러리홀",
+   "id": "sn-photo-contest-41-2026"
   },
   {
    "area": "성남 판교",
@@ -4493,6 +4530,24 @@
   {
    "area": "여의도",
    "category": "popup",
+   "end": "",
+   "firstSeen": "2026-11-02T22:55:00Z",
+   "highlight": false,
+   "reservation": "확인 필요",
+   "reservationOpen": "",
+   "reservationUrl": "",
+   "scope": "local",
+   "start": "2026-10-29",
+   "summary": "호쿠스포쿠스 브랜드 첫 팝업. 종료일 확인 필요",
+   "title": "호쿠스포쿠스 팝업",
+   "updated": "2026-11-02T22:55:00Z",
+   "url": "https://popga.co.kr/popup/14898",
+   "venue": "더현대 서울",
+   "id": "thehyundai-hocuspocus-popup-202610"
+  },
+  {
+   "area": "여의도",
+   "category": "popup",
    "end": "2026-11-11",
    "firstSeen": "2026-11-06T05:51:00Z",
    "highlight": false,
@@ -4824,7 +4879,6 @@
    "id": "yi-10cm-sosubin-concert-2026"
   },
   {
-   "id": "yi-apple-kung-musical-2026",
    "area": "용인 수지",
    "category": "culture",
    "end": "2026-11-22",
@@ -4840,7 +4894,27 @@
    "title": "어린이 베스트셀러 뮤지컬 〈사과가 쿵〉 - 용인",
    "updated": "2026-11-04T03:49:10Z",
    "url": "https://www.yongin.go.kr/partInfo/cultureArt/BD_selectCultureArt.do?q_showIdx=16840&q_year=2026&q_month=11",
-   "venue": "용인시 평생학습관 큰어울마당"
+   "venue": "용인시 평생학습관 큰어울마당",
+   "id": "yi-apple-kung-musical-2026"
+  },
+  {
+   "area": "용인",
+   "category": "culture",
+   "end": "2026-11-07",
+   "firstSeen": "2026-11-06T07:01:00Z",
+   "highlight": true,
+   "home": true,
+   "reservation": "전석 무료. 관람 방법은 문의 010-4706-9466",
+   "reservationOpen": "",
+   "reservationUrl": "",
+   "scope": "local",
+   "start": "2026-11-07",
+   "summary": "11/7(토) 17:00, 60분, 전체관람. 문화예술공모지원사업 무용 공연, 전석 무료",
+   "title": "빛, 향 그리고 춤",
+   "updated": "2026-11-06T07:01:00Z",
+   "url": "https://www.yongin.go.kr/partInfo/cultureArt/BD_selectCultureArt.do?q_showIdx=16909&q_year=2026&q_month=11",
+   "venue": "마루홀 (용인문화재단)",
+   "id": "yi-bit-hyang-dance-20261107"
   },
   {
    "area": "용인",
@@ -4900,7 +4974,6 @@
    "id": "yi-children-choir-48th-2026"
   },
   {
-   "id": "yi-choi-sobin-ballet-nutcracker-2026",
    "area": "용인 처인",
    "category": "culture",
    "end": "2026-12-03",
@@ -4916,7 +4989,27 @@
    "title": "최소빈발레단 〈호두까기인형〉 - 용인",
    "updated": "2026-11-05T03:17:20Z",
    "url": "https://www.yongin.go.kr/partInfo/cultureArt/BD_selectCultureArt.do?q_showIdx=16990&q_year=2026&q_month=12",
-   "venue": "용인시문예회관 처인홀"
+   "venue": "용인시문예회관 처인홀",
+   "id": "yi-choi-sobin-ballet-nutcracker-2026"
+  },
+  {
+   "area": "용인 처인",
+   "category": "culture",
+   "end": "2026-11-19",
+   "firstSeen": "2026-11-06T07:01:00Z",
+   "highlight": false,
+   "home": true,
+   "reservation": "확인 필요 (요금 미정, 주최 극단아이숲)",
+   "reservationOpen": "",
+   "reservationUrl": "",
+   "scope": "local",
+   "start": "2026-11-19",
+   "summary": "11/19(목) 10:30 예정, 40분 예정, 전체관람. 극단아이숲 대관 공연, 요금 미정",
+   "title": "가족뮤지컬 신데렐라",
+   "updated": "2026-11-06T07:01:00Z",
+   "url": "https://www.yongin.go.kr/partInfo/cultureArt/BD_selectCultureArt.do?q_showIdx=16798&q_year=2026&q_month=11",
+   "venue": "용인시문예회관 처인홀",
+   "id": "yi-cinderella-family-musical-20261119"
   },
   {
    "area": "용인 수지",
@@ -4976,6 +5069,25 @@
    "id": "yi-danjjak-friend-music-drama-20261108"
   },
   {
+   "area": "용인 수지",
+   "category": "culture",
+   "end": "2026-11-12",
+   "firstSeen": "2026-11-06T07:01:00Z",
+   "highlight": false,
+   "home": true,
+   "reservation": "전석 무료. 입장 방법은 확인 필요 (단국대학교 무용과)",
+   "reservationOpen": "",
+   "reservationUrl": "",
+   "scope": "local",
+   "start": "2026-11-12",
+   "summary": "11/12(목) 19시, 전석 무료, 전체관람. 대관 무용 공연",
+   "title": "2026 단국대학교 무용과 제37회 작품 발표회",
+   "updated": "2026-11-06T07:01:00Z",
+   "url": "https://www.yongin.go.kr/partInfo/cultureArt/BD_selectCultureArt.do?q_showIdx=16997&q_year=2026&q_month=11",
+   "venue": "용인포은아트홀",
+   "id": "yi-dku-dance-37th-2026"
+  },
+  {
    "area": "용인 기흥",
    "category": "culture",
    "end": "2026-11-07",
@@ -5011,6 +5123,25 @@
    "url": "https://www.dtoday.co.kr/news/articleView.html?idxno=799909",
    "venue": "용인 동백도서관 시청각실",
    "id": "yi-dongbaek-library-healing-concert-2026"
+  },
+  {
+   "area": "용인",
+   "category": "culture",
+   "end": "2026-11-22",
+   "firstSeen": "2026-11-06T07:01:00Z",
+   "highlight": false,
+   "home": true,
+   "reservation": "무료. 예약 방법은 확인 필요 (용인문화재단 031-260-3355)",
+   "reservationOpen": "",
+   "reservationUrl": "",
+   "scope": "local",
+   "start": "2026-11-22",
+   "summary": "11/22(일) 16시, 무료, 전체관람. 용인문화재단 기획 연극",
+   "title": "2026 꿈의 극단 정기공연 〈나는, 몇시지?〉",
+   "updated": "2026-11-06T07:01:00Z",
+   "url": "https://www.yicf.or.kr/main/show/view.do?show_type=perform&viewType=img&SHOW_IDX=16998",
+   "venue": "마루홀 (용인문화재단)",
+   "id": "yi-dream-troupe-what-time-20261122"
   },
   {
    "area": "용인 처인",
@@ -5068,7 +5199,6 @@
    "id": "yi-gaeul-byeolbit-gwangjang-2026"
   },
   {
-   "id": "yi-gyubang-culture-expo-9th-2026",
    "area": "용인 처인",
    "category": "culture",
    "end": "2026-11-21",
@@ -5084,10 +5214,48 @@
    "title": "제9회 대한민국 규방문화대전",
    "updated": "2026-11-04T03:49:10Z",
    "url": "https://www.yongin.go.kr/partInfo/cultureArt/BD_selectCultureArt.do?q_showIdx=16980&q_year=2026&q_month=11",
-   "venue": "용인시문화예술원 대전시실"
+   "venue": "용인시문화예술원 대전시실",
+   "id": "yi-gyubang-culture-expo-9th-2026"
   },
   {
-   "id": "yi-inwangsan-tiger-martial-play-2026",
+   "area": "용인 처인",
+   "category": "culture",
+   "end": "2026-11-08",
+   "firstSeen": "2026-11-06T07:01:00Z",
+   "highlight": true,
+   "home": true,
+   "reservation": "무료, 현장 입장 (문의 031-336-8872)",
+   "reservationOpen": "",
+   "reservationUrl": "",
+   "scope": "local",
+   "start": "2026-10-27",
+   "summary": "한국미술협회 용인지부 전시. 10:00~17:00, 11/8은 12:00까지, 무료, 전체관람",
+   "title": "제8회 용인 역사 문화 미술 아카이브",
+   "updated": "2026-11-06T07:01:00Z",
+   "url": "https://www.yongin.go.kr/partInfo/cultureArt/BD_selectCultureArt.do?q_showIdx=16910&q_year=2026&q_month=11",
+   "venue": "용인시문화예술원 대전시실",
+   "id": "yi-history-art-archive-8th-2026"
+  },
+  {
+   "area": "용인 처인",
+   "category": "culture",
+   "end": "2026-11-28",
+   "firstSeen": "2026-11-06T07:01:00Z",
+   "highlight": false,
+   "home": true,
+   "reservation": "확인 필요 (대관공연, 주최 단체 문의)",
+   "reservationOpen": "",
+   "reservationUrl": "",
+   "scope": "local",
+   "start": "2026-11-28",
+   "summary": "11/28(토) 19:00, 120분 예정. 전통예술 대관 공연, 요금 안내 없음",
+   "title": "용인시 향토무형문화유산 전수발표회",
+   "updated": "2026-11-06T07:01:00Z",
+   "url": "https://www.yongin.go.kr/partInfo/cultureArt/BD_selectCultureArt.do?q_showIdx=16875&q_year=2026&q_month=11",
+   "venue": "용인시문예회관 처인홀",
+   "id": "yi-hyangto-heritage-recital-20261128"
+  },
+  {
    "area": "용인 수지",
    "category": "culture",
    "end": "2026-11-07",
@@ -5103,7 +5271,8 @@
    "title": "창작무예극 〈인왕산 호랑이〉",
    "updated": "2026-11-05T03:17:20Z",
    "url": "https://www.yongin.go.kr/partInfo/cultureArt/BD_selectCultureArt.do?q_showIdx=16754&q_year=2026&q_month=11",
-   "venue": "용인시 평생학습관 큰어울마당"
+   "venue": "용인시 평생학습관 큰어울마당",
+   "id": "yi-inwangsan-tiger-martial-play-2026"
   },
   {
    "area": "용인 수지",
@@ -5313,6 +5482,25 @@
    "url": "https://www.yongin.go.kr/partInfo/cultureArt/BD_selectCultureArt.do?q_showIdx=16879&q_year=2026&q_month=11",
    "venue": "용인포은아트홀",
    "id": "yi-senior-musical-harmony-20261105"
+  },
+  {
+   "area": "용인 처인",
+   "category": "culture",
+   "end": "2026-11-14",
+   "firstSeen": "2026-11-06T07:01:00Z",
+   "highlight": false,
+   "home": true,
+   "reservation": "전석 초대. 초대권 받는 방법은 주최 (사)용인문화시민광장에 확인 필요",
+   "reservationOpen": "",
+   "reservationUrl": "",
+   "scope": "local",
+   "start": "2026-11-14",
+   "summary": "11/14(토) 16:00, 약 80분, 전석 초대. 대관 클래식 공연",
+   "title": "용인시민과 함께하는 고단한 하루 끝, 클래식",
+   "updated": "2026-11-06T07:01:00Z",
+   "url": "https://www.yongin.go.kr/partInfo/cultureArt/BD_selectCultureArt.do?q_showIdx=16796&q_year=2026&q_month=11",
+   "venue": "용인시문예회관 처인홀",
+   "id": "yi-tired-day-classic-20261114"
   },
   {
    "area": "용인 수지",
