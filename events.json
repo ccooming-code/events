@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-08T23:27:26Z",
+ "generatedAt": "2026-11-08T23:31:12Z",
  "events": [
   {
    "area": "압구정",
@@ -4351,6 +4351,25 @@
   {
    "area": "성남 분당",
    "category": "culture",
+   "end": "2026-12-05",
+   "firstSeen": "2026-11-08T23:45:00Z",
+   "highlight": false,
+   "home": true,
+   "reservation": "성남시 통합예약 시민참여(공연·전시)에서 11/23~11/27 신청 후 추첨 (문의 031-729-2997)",
+   "reservationOpen": "2026-11-23T00:00",
+   "reservationUrl": "",
+   "scope": "local",
+   "start": "2026-12-05",
+   "summary": "카르멘·라라랜드·오블리비언·크리스마스 메들리 등 첼로 사중주. 12/5(토) 18:00~19:00, 초등생 이상. 요금은 확인 필요",
+   "title": "성남물빛정원 뮤직홀 〈첼로 콰르텟 Anima Celli의 겨울선율〉",
+   "updated": "2026-11-08T23:45:00Z",
+   "url": "https://www.seongnam.go.kr/pm010201/6549",
+   "venue": "성남물빛정원 뮤직홀",
+   "id": "sn-mulbit-anima-celli-20261205"
+  },
+  {
+   "area": "성남 분당",
+   "category": "culture",
    "end": "2026-11-14",
    "firstSeen": "2026-11-03T06:22:00Z",
    "highlight": false,
@@ -6176,6 +6195,25 @@
    "id": "yi-leviq-black-benefit-popup-202611"
   },
   {
+   "area": "용인 처인",
+   "category": "culture",
+   "end": "2026-12-06",
+   "firstSeen": "2026-11-08T23:45:00Z",
+   "highlight": false,
+   "home": true,
+   "reservation": "대관공연, 예매·문의 놀이터 070-7807-0701",
+   "reservationOpen": "",
+   "reservationUrl": "",
+   "scope": "local",
+   "start": "2026-12-05",
+   "summary": "크리스마스 가족·어린이 공연. 55분, 만 24개월 이상, 40,000원",
+   "title": "가족공연 〈메리크리스마스 산타할아버지〉 - 용인",
+   "updated": "2026-11-08T23:45:00Z",
+   "url": "https://www.yongin.go.kr/partInfo/cultureArt/BD_selectCultureArt.do?q_showIdx=16800&q_year=2026&q_month=12",
+   "venue": "용인시문화예술원 처인홀",
+   "id": "yi-merry-christmas-santa-20261205"
+  },
+  {
    "area": "용인 수지",
    "category": "culture",
    "end": "2026-11-29",
@@ -6364,6 +6402,25 @@
    "url": "https://nol.yanolja.com/ticket/products/26013411",
    "venue": "용인포은아트홀",
    "id": "yi-yoonbyul-ballet-grand-gala-2026"
+  },
+  {
+   "area": "용인 수지",
+   "category": "culture",
+   "end": "2026-12-06",
+   "firstSeen": "2026-11-08T23:45:00Z",
+   "highlight": false,
+   "home": true,
+   "reservation": "무료. 용인문화재단 공연 상세페이지 댓글이벤트로 사전예약 11/24(화) 13:00~12/3(목) 15:00 (선착순, 좌석지정 불가, 문의 031-323-6577)",
+   "reservationOpen": "2026-11-24T13:00",
+   "reservationUrl": "https://www.yicf.or.kr/main/show/view.do?show_type=perform&viewType=img&SHOW_IDX=16992",
+   "scope": "local",
+   "start": "2026-12-06",
+   "summary": "12/6(일) 17:00, 약 100분, 5세 이상, 전석 무료",
+   "title": "용인시립청소년오케스트라 제39회 정기연주회 〈Romanticism〉",
+   "updated": "2026-11-08T23:45:00Z",
+   "url": "https://www.yongin.go.kr/partInfo/cultureArt/BD_selectCultureArt.do?q_showIdx=16992&q_year=2026&q_month=12",
+   "venue": "용인포은아트홀",
+   "id": "yi-youth-orchestra-39th-2026"
   },
   {
    "area": "용인 수지",
