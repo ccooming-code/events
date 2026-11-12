@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-11T23:21:08Z",
+ "generatedAt": "2026-11-12T04:13:31Z",
  "events": [
   {
    "area": "압구정",
@@ -1139,15 +1139,15 @@
    "firstSeen": "2026-11-11T05:53:00Z",
    "highlight": false,
    "home": true,
-   "reservation": "확인 필요 (광주시문화재단 1522-0338)",
+   "reservation": "전석 무료 (문의 02-2282-7114)",
    "reservationOpen": "",
    "reservationUrl": "",
    "scope": "local",
    "start": "2026-11-20",
-   "summary": "전국 장애인 합창단이 참여하는 합창대회(대관 공연). 시간·관람 방법 확인 필요",
+   "summary": "11/20(금) 14:00, 장애인합창단 17개팀·광주시여성합창단 출연 (160분). 전석 무료",
    "title": "제34회 세계 장애인의 날 기념 전국장애인합창대회",
-   "updated": "2026-11-11T05:53:00Z",
-   "url": "https://www.nsart.or.kr/perform/year.do",
+   "updated": "2026-11-12T04:12:55Z",
+   "url": "https://www.nsart.or.kr/perform.do?act=detail&pfrmId=682",
    "venue": "광주시문화예술의전당 남한산성홀",
    "id": "gj-national-disabled-choir-contest-34-2026"
   },
@@ -6594,6 +6594,25 @@
    "id": "yi-bit-hyang-dance-20261107"
   },
   {
+   "area": "용인 기흥",
+   "category": "culture",
+   "end": "2026-11-21",
+   "firstSeen": "2026-11-12T04:12:55Z",
+   "highlight": false,
+   "home": true,
+   "reservation": "무료, 현장 방문 (문의 민생경제과 031-6193-3892)",
+   "reservationOpen": "",
+   "reservationUrl": "",
+   "scope": "local",
+   "start": "2026-11-21",
+   "summary": "11/21(토) 11:00~17:00 골목상권 축제 — 영수증 미션 이벤트, OX 퀴즈·빙고, 주민 체험·홍보부스 30곳. 무료",
+   "title": "제2회 보정중심 문화축제",
+   "updated": "2026-11-12T04:12:55Z",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20261112095904751",
+   "venue": "죽전 중앙근린공원 일대",
+   "id": "yi-bojeong-jungsim-culture-festival-2026"
+  },
+  {
    "area": "용인",
    "category": "culture",
    "end": "2026-11-14",
@@ -6719,10 +6738,10 @@
    "reservationUrl": "",
    "scope": "local",
    "start": "2026-12-05",
-   "summary": "12/5(토), 약 90분, 전체관람. 용인문화재단 기획공연, 전석 무료 (상세 내용 추후 공개)",
-   "title": "2026 용인시민아카데미 기획공연",
-   "updated": "2026-11-11T04:05:00Z",
-   "url": "https://www.yongin.go.kr/partInfo/cultureArt/BD_selectCultureArt.do?q_showIdx=16999&q_year=2026&q_month=12",
+   "summary": "12/5(토) 17:00, 약 90분, 무용 공연, 전체관람. 전석 무료",
+   "title": "2026 용인시민아카데미 기획공연 〈Beautiful Life~ 용인 : 봄·여름·가을·겨울〉",
+   "updated": "2026-11-12T04:12:55Z",
+   "url": "https://www.yicf.or.kr/main/show/view.do?show_type=perform&viewType=img&SHOW_IDX=16999",
    "venue": "큰어울마당 (용인문화재단)",
    "id": "yi-citizen-academy-concert-20261205"
   },
