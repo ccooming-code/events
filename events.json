@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-13T05:00:24Z",
+ "generatedAt": "2026-11-13T06:21:02Z",
  "events": [
   {
    "area": "압구정",
@@ -370,6 +370,25 @@
    "url": "https://www.sukbakmagazine.com/news/articleView.html?idxno=69871",
    "venue": "부여 (세부 장소 확인 필요)",
    "id": "buyeo-nakhwa-nori-2026"
+  },
+  {
+   "area": "동대문",
+   "category": "popup",
+   "end": "2026-11-29",
+   "firstSeen": "2026-11-13T05:55:00Z",
+   "highlight": false,
+   "home": false,
+   "reservation": "네이버 예약 사전예약 권장, 현장 입장도 가능. 10~12시는 사전예약자 우선, 현장 대기 등록 18시 마감",
+   "reservationOpen": "",
+   "reservationUrl": "https://booking.naver.com/booking/6/bizes/1752295",
+   "scope": "local",
+   "start": "2026-10-30",
+   "summary": "인기 캐릭터 '마루는 강쥐'의 야광별 꿈나라 콘셉트 팝업 (매일 10~19시, 동대문역 4번 출구 도보 3분)",
+   "title": "마루는 강쥐 「꿈나라 별나라 마루」 팝업",
+   "updated": "2026-11-13T05:55:00Z",
+   "url": "https://spotts.kr/f/popup-2026-maru-is-a-puppy-dreamland-changsin",
+   "venue": "종로구 종로54길 26-3 1층 (창신동 문구거리)",
+   "id": "changsin-maru-puppy-dreamland-popup-202610"
   },
   {
    "area": "청담",
@@ -1432,6 +1451,25 @@
    "url": "https://popply.co.kr/popup/6506",
    "venue": "애니플러스 서울 합정점 (월드컵로3길 14)",
    "id": "hapjeong-sannabi-aniplus-cafe-202611"
+  },
+  {
+   "area": "합정",
+   "category": "popup",
+   "end": "2026-11-30",
+   "firstSeen": "2026-11-13T05:55:00Z",
+   "highlight": false,
+   "home": false,
+   "reservation": "DAY 타임 자유 입장, NIGHT 타임 예약금 3,000원(방문 시 환불). 예약 방법은 공식 X @Toonique_02 확인",
+   "reservationOpen": "",
+   "reservationUrl": "",
+   "scope": "local",
+   "start": "2026-11-12",
+   "summary": "팝업 카페 투니크의 축제 기간 이벤트 (매일 11~21시, 세부 프로그램은 공식 계정 확인)",
+   "title": "2026 투니크 축제 (팝업 카페 투니크 유니버스점)",
+   "updated": "2026-11-13T05:55:00Z",
+   "url": "https://spotts.kr/f/popup-2026-toonique-festival-hapjeong",
+   "venue": "카페 투니크 유니버스점 (마포구 양화로 78-17)",
+   "id": "hapjeong-toonique-festival-202611"
   },
   {
    "area": "홍대",
@@ -2648,6 +2686,25 @@
    "id": "lotteworld-cookierun-sweet-winter-2026"
   },
   {
+   "area": "마곡",
+   "category": "culture",
+   "end": "2026-12-27",
+   "firstSeen": "2026-11-13T05:55:00Z",
+   "highlight": false,
+   "home": false,
+   "reservation": "확인 필요 (문의 02-2600-5890)",
+   "reservationOpen": "",
+   "reservationUrl": "",
+   "scope": "local",
+   "start": "2026-11-27",
+   "summary": "강서구가 여는 연말 경관 조명·공연 행사 (세부 프로그램·점등 시간은 확인 필요)",
+   "title": "마곡위시빌리지",
+   "updated": "2026-11-13T05:55:00Z",
+   "url": "https://festivalhub.kr/festival/s179q6bh.html",
+   "venue": "강서구 마곡문화의거리 (발산역 도보 2분)",
+   "id": "magok-wish-village-2026"
+  },
+  {
    "area": "홍대",
    "category": "culture",
    "end": "2026-11-15",
@@ -2889,6 +2946,25 @@
    "url": "https://www.sisunnews.co.kr/news/articleView.html?idxno=248411",
    "venue": "당현천 일대",
    "id": "nowon-moonlight-walk-2026"
+  },
+  {
+   "area": "파주",
+   "category": "culture",
+   "end": "2026-11-29",
+   "firstSeen": "2026-11-13T05:55:00Z",
+   "highlight": false,
+   "home": false,
+   "reservation": "입장료·예약 안내 확인 필요 (문의 031-940-5281)",
+   "reservationOpen": "",
+   "reservationUrl": "",
+   "scope": "local",
+   "start": "2026-11-27",
+   "summary": "경기 북부 대표 먹거리 축제. 장단콩·된장·청국장·두부 농가 직판장, 두부 만들기·콩 타작 체험, 콩 요리 시식",
+   "title": "제30회 파주장단콩축제",
+   "updated": "2026-11-13T05:55:00Z",
+   "url": "https://festivalhub.kr/festival/s1iuy6lt.html",
+   "venue": "임진각 광장 일대 (파주시 문산읍)",
+   "id": "paju-jangdan-bean-festival-30-2026"
   },
   {
    "area": "파주",
@@ -4022,6 +4098,25 @@
    "id": "seoul-k-content-travel-week-2026"
   },
   {
+   "area": "광화문",
+   "category": "culture",
+   "end": "2027-01-31",
+   "firstSeen": "2026-11-13T05:55:00Z",
+   "highlight": false,
+   "home": false,
+   "reservation": "입장 무료로 안내, 예약 정보 확인 필요",
+   "reservationOpen": "",
+   "reservationUrl": "",
+   "scope": "local",
+   "start": "2026-12-11",
+   "summary": "서울시 대표 겨울 축제. 서울라이트 광화문(12/11~1/3, 17:30~22시), 광화문마켓, 서울광장 스케이트장(12/18~) 등 — 일정은 공식 발표 전이라 확인 필요",
+   "title": "2026 서울윈터페스타 (서울라이트 광화문·광화문마켓 등)",
+   "updated": "2026-11-13T05:55:00Z",
+   "url": "https://www.yugacrew.com/crewletter/seoul-december-festival-2026",
+   "venue": "광화문광장·청계천·서울광장·DDP·보신각 등 도심 일대",
+   "id": "seoul-winter-festa-2026"
+  },
+  {
    "area": "성수",
    "category": "popup",
    "end": "2026-11-16",
@@ -4149,6 +4244,25 @@
    "url": "https://www.caskcarnival.com/",
    "venue": "세텍 제3전시관",
    "id": "setec-cask-carnival-2026"
+  },
+  {
+   "area": "대치동",
+   "category": "expo",
+   "end": "2026-11-29",
+   "firstSeen": "2026-11-13T05:55:00Z",
+   "highlight": false,
+   "home": false,
+   "reservation": "기본 무료, 일부 구역 8,000원(초등생 이하 무료). 네이버 예약으로 입장권 사전 구매 가능 — 예약 페이지 주소 미확인",
+   "reservationOpen": "",
+   "reservationUrl": "",
+   "scope": "local",
+   "start": "2026-11-28",
+   "summary": "밀리터리·피규어·에어소프트 취미 박람회 (28일 10~18시, 29일 10~17시)",
+   "title": "제38회 플래툰 컨벤션",
+   "updated": "2026-11-13T05:55:00Z",
+   "url": "https://spotts.kr/f/expo-2026-platoon-convention-38th",
+   "venue": "세텍(SETEC) 제3전시실",
+   "id": "setec-platoon-convention-38-2026"
   },
   {
    "area": "대치동",
@@ -5907,6 +6021,25 @@
    "id": "store-oliveyoung-myeongdong-hongdae-rescene-202611"
   },
   {
+   "area": "순창",
+   "category": "culture",
+   "end": "2026-11-22",
+   "firstSeen": "2026-11-13T05:55:00Z",
+   "highlight": false,
+   "home": false,
+   "reservation": "입장 무료, 일부 체험 유료. 예약 안내 없음 (문의 063-653-1827)",
+   "reservationOpen": "",
+   "reservationUrl": "",
+   "scope": "national",
+   "start": "2026-11-21",
+   "summary": "전국 유명 떡볶이 브랜드와 고추장 명인이 모이는 먹거리 축제 — 매운맛 도전·떡볶이 만들기 체험, 고추장 본고장 장류 쇼핑까지 묶어 일부러 갈 만함 (10~17시)",
+   "title": "순창 KOREA 떡볶이 페스타 2026",
+   "updated": "2026-11-13T05:55:00Z",
+   "url": "https://festivalhub.kr/festival/3395188.html",
+   "venue": "순창발효테마파크·전통고추장민속마을 일대",
+   "id": "sunchang-tteokbokki-festa-2026"
+  },
+  {
    "area": "수원",
    "category": "popup",
    "end": "2026-11-19",
@@ -6052,6 +6185,25 @@
    "url": "https://popply.co.kr/popup/6652",
    "venue": "더현대 서울 지하 2층 ICONIC 존",
    "id": "thehyundai-999humanity-winter-restock-202611"
+  },
+  {
+   "area": "여의도",
+   "category": "popup",
+   "end": "2026-11-18",
+   "firstSeen": "2026-11-13T05:55:00Z",
+   "highlight": false,
+   "home": false,
+   "reservation": "예약 없음, 현장 입장",
+   "reservationOpen": "",
+   "reservationUrl": "",
+   "scope": "local",
+   "start": "2026-11-12",
+   "summary": "브랜드 알키알카의 첫 오프라인 팝업 (월~목 10:30~20:00, 금~일 20:30까지)",
+   "title": "알키알카(ALKI ALKA) 첫 번째 팝업스토어",
+   "updated": "2026-11-13T05:55:00Z",
+   "url": "https://spotts.kr/f/popup-2026-alki-alka-thehyundai-seoul",
+   "venue": "더현대 서울 B2F EAST",
+   "id": "thehyundai-alkialka-popup-202611"
   },
   {
    "area": "여의도",
@@ -7526,7 +7678,7 @@
    "category": "culture",
    "end": "2026-11-15",
    "firstSeen": "2026-11-13T05:00:24Z",
-   "highlight": false,
+   "highlight": true,
    "home": true,
    "reservation": "사전 예약 안내 없음, 현장 방문 (체험비 확인 필요)",
    "reservationOpen": "",
@@ -7535,7 +7687,7 @@
    "start": "2026-11-14",
    "summary": "11/14(토)~15(일) 09:30~16:30, 5개 존 체험(요일별 상이: 셀프 음료·장수풍뎅이 애벌레 토·일, 스마트팜 샐러드 토, 밀짚모자·볏짚 놀이 일). 체험비 확인 필요",
    "title": "용인농촌테마파크 11월 주말 상시체험 (밀짚모자 꾸미기·곤충·스마트팜 등)",
-   "updated": "2026-11-13T05:00:24Z",
+   "updated": "2026-11-13T05:55:00Z",
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1259&q_clCode=-1&q_bbscttSn=20261111152509256",
    "venue": "용인농촌테마파크",
    "id": "yi-rural-theme-park-weekend-experience-20261114"
@@ -7785,6 +7937,25 @@
    "url": "https://www.topstarnews.net/news/articleView.html?idxno=16266828",
    "venue": "하이브 용산 사옥",
    "id": "yongsan-fims-holiday-express-popup-202611"
+  },
+  {
+   "area": "용산",
+   "category": "popup",
+   "end": "2026-11-24",
+   "firstSeen": "2026-11-13T05:55:00Z",
+   "highlight": false,
+   "home": false,
+   "reservation": "예약 안내 없음, 영업시간 내 방문 (확인 필요)",
+   "reservationOpen": "",
+   "reservationUrl": "",
+   "scope": "local",
+   "start": "2026-11-11",
+   "summary": "여러 애니 IP의 누들 스토퍼 피규어, Trio-Try-iT·Bicute Muchute 등 신상품 (매일 10:30~22:00)",
+   "title": "FuRyu 누들 스토퍼 팝업스토어",
+   "updated": "2026-11-13T05:55:00Z",
+   "url": "https://spotts.kr/f/popup-2026-furyu-noodle-stopper-yongsan-ipark",
+   "venue": "용산 아이파크몰 리빙파크 3층 더 팝업",
+   "id": "yongsan-furyu-noodle-stopper-popup-202611"
   },
   {
    "area": "용산",
