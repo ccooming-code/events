@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-13T00:44:03Z",
+ "generatedAt": "2026-11-13T05:00:24Z",
  "events": [
   {
    "area": "압구정",
@@ -6822,6 +6822,25 @@
    "id": "yi-bit-hyang-dance-20261107"
   },
   {
+   "area": "용인 수지",
+   "category": "culture",
+   "end": "2026-12-09",
+   "firstSeen": "2026-11-13T05:00:24Z",
+   "highlight": false,
+   "home": true,
+   "reservation": "대관공연 — 용인문화재단 홈페이지 온라인 예매 링크 없음. 예매·문의 프로젝트 클라우드 나인 010-8285-1906",
+   "reservationOpen": "",
+   "reservationUrl": "",
+   "scope": "local",
+   "start": "2026-12-09",
+   "summary": "12/9(수) 15:00·19:00 2회, 70분, 전석 20,000원",
+   "title": "컨템포러리 발레 〈블랙 스노우〉 (프로젝트 클라우드 나인 기획공연)",
+   "updated": "2026-11-13T05:00:24Z",
+   "url": "https://www.yicf.or.kr/main/show/view.do?show_type=perform&viewType=img&SHOW_IDX=16811",
+   "venue": "용인포은아트홀 큰어울마당",
+   "id": "yi-black-snow-contemporary-ballet-2026"
+  },
+  {
    "area": "용인 기흥",
    "category": "culture",
    "end": "2026-11-21",
@@ -7501,6 +7520,25 @@
    "url": "https://www.yongin.go.kr/partInfo/cultureArt/BD_selectCultureArt.do?q_showIdx=16873&q_year=2026&q_month=11",
    "venue": "용인시 평생학습관 큰어울마당",
    "id": "yi-play-one-day-suddenly-2026"
+  },
+  {
+   "area": "용인 처인 원삼",
+   "category": "culture",
+   "end": "2026-11-15",
+   "firstSeen": "2026-11-13T05:00:24Z",
+   "highlight": false,
+   "home": true,
+   "reservation": "사전 예약 안내 없음, 현장 방문 (체험비 확인 필요)",
+   "reservationOpen": "",
+   "reservationUrl": "",
+   "scope": "local",
+   "start": "2026-11-14",
+   "summary": "11/14(토)~15(일) 09:30~16:30, 5개 존 체험(요일별 상이: 셀프 음료·장수풍뎅이 애벌레 토·일, 스마트팜 샐러드 토, 밀짚모자·볏짚 놀이 일). 체험비 확인 필요",
+   "title": "용인농촌테마파크 11월 주말 상시체험 (밀짚모자 꾸미기·곤충·스마트팜 등)",
+   "updated": "2026-11-13T05:00:24Z",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1259&q_clCode=-1&q_bbscttSn=20261111152509256",
+   "venue": "용인농촌테마파크",
+   "id": "yi-rural-theme-park-weekend-experience-20261114"
   },
   {
    "area": "용인 수지",
