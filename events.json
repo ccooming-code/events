@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-17T06:21:05Z",
+ "generatedAt": "2026-11-17T06:41:12Z",
  "events": [
   {
    "area": "광화문",
@@ -4385,6 +4385,25 @@
    "id": "sn-daybreak-lucy-sanbo-winter-city-2026"
   },
   {
+   "area": "성남 분당",
+   "category": "culture",
+   "end": "2026-11-21",
+   "firstSeen": "2026-11-17T06:50:00Z",
+   "highlight": false,
+   "home": true,
+   "reservation": "무료, 현장 참여 (문의 성남민예총 031-753-2582)",
+   "reservationOpen": "",
+   "reservationUrl": "",
+   "scope": "local",
+   "start": "2026-11-21",
+   "summary": "11/21(토) 14:00~16:00 전통연희 한마당 — 해금·퉁소, 승무, 앉은반사물놀이, 판굿·구정놀이, 대동놀이. 누구나, 무료",
+   "title": "제22회 가을 도심속의 풍물이야기",
+   "updated": "2026-11-17T06:50:00Z",
+   "url": "https://www.seongnam.go.kr/pm010201/6562",
+   "venue": "분당 오리공원 (구미동 197-11)",
+   "id": "sn-dosim-pungmul-story-22-2026"
+  },
+  {
    "area": "성남 판교",
    "category": "popup",
    "end": "2026-11-15",
@@ -4918,16 +4937,16 @@
    "category": "culture",
    "end": "2026-11-28",
    "firstSeen": "2026-11-04T03:49:10Z",
-   "highlight": false,
+   "highlight": true,
    "home": true,
-   "reservation": "성남시 통합예약 시민참여(공연·전시)에서 신청 후 추첨. 시 게시 접수기간 11/16~11/20, 문의 문화팀 031-729-2997. 공연별 신청 주소는 접수 시작 후 확인",
-   "reservationOpen": "2026-11-16T00:00",
-   "reservationUrl": "",
+   "reservation": "성남시 통합예약 시민참여(공연·전시)에서 신청 후 추첨(심사). 접수 11/16 09:00~11/20 18:00, 150석. 문의 문화팀 031-729-2997",
+   "reservationOpen": "2026-11-16T09:00",
+   "reservationUrl": "https://www.seongnam.go.kr/apply/lecture/step1?instiCode=INST_CITY_01&facilityId=L0710",
    "scope": "local",
    "start": "2026-11-28",
    "summary": "11/28(토) 18:00~19:00, 취학아동 이상. 150석. 요금은 확인 필요",
    "title": "성남물빛정원 뮤직홀 〈임미정 Autumn in Jazz〉",
-   "updated": "2026-11-16T22:55:00Z",
+   "updated": "2026-11-17T06:50:00Z",
    "url": "https://www.seongnam.go.kr/pm010201/6529",
    "venue": "성남물빛정원 뮤직홀",
    "id": "sn-mulbit-limmijung-jazz-20261128"
@@ -7238,6 +7257,25 @@
    "id": "yi-rural-theme-park-weekend-experience-20261114"
   },
   {
+   "area": "용인 처인",
+   "category": "culture",
+   "end": "2026-11-22",
+   "firstSeen": "2026-11-17T06:50:00Z",
+   "highlight": false,
+   "home": true,
+   "reservation": "사전 예약 안내 없음, 현장 방문 (체험비 확인 필요)",
+   "reservationOpen": "",
+   "reservationUrl": "",
+   "scope": "local",
+   "start": "2026-11-21",
+   "summary": "11/21(토)~22(일) 09:30~16:30(동절기 단축). 토: 스마트팜 샐러드·장수풍뎅이·셀프음료 / 일: 밀짚모자 꾸미기·볏짚놀이·장수풍뎅이·셀프음료",
+   "title": "용인농촌테마파크 11월 3째주 주말 상시체험 (곤충·스마트팜·볏짚놀이 등)",
+   "updated": "2026-11-17T06:50:00Z",
+   "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1259&q_clCode=-1&q_bbscttSn=20261117133245949",
+   "venue": "용인농촌테마파크",
+   "id": "yi-rural-theme-park-weekend-experience-20261121"
+  },
+  {
    "area": "용인 수지",
    "category": "culture",
    "end": "2026-12-25",
@@ -7331,6 +7369,25 @@
    "url": "https://www.lotteshopping.com/shpgnews/shpgnewsDetail?shpgNewsNo=SNM00000000000560428",
    "venue": "롯데몰 수지점 1F 본매장",
    "id": "yi-ugg-lotte-mall-suji-2026"
+  },
+  {
+   "area": "용인 처인",
+   "category": "culture",
+   "end": "2026-12-11",
+   "firstSeen": "2026-11-17T06:50:00Z",
+   "highlight": false,
+   "home": true,
+   "reservation": "무료, 현장 입장 (문의 용인문화원 031-324-9600)",
+   "reservationOpen": "",
+   "reservationUrl": "",
+   "scope": "local",
+   "start": "2026-12-08",
+   "summary": "12/8~12/11 10:00~17:00 (8일 14시부터, 11일 14시까지). 전체관람, 무료",
+   "title": "제17회 우리문화한마당 (용인문화원)",
+   "updated": "2026-11-17T06:50:00Z",
+   "url": "https://www.yongin.go.kr/partInfo/cultureArt/BD_selectCultureArt.do?q_showIdx=16982&q_year=2026&q_month=12",
+   "venue": "용인시문화예술원 대전시실",
+   "id": "yi-urimunhwa-hanmadang-17-2026"
   },
   {
    "area": "용인 수지",
