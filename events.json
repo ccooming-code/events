@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-17T23:21:35Z",
+ "generatedAt": "2026-11-18T03:19:45Z",
  "events": [
   {
    "area": "광화문",
@@ -5203,6 +5203,25 @@
    "id": "sn-pinebrick-ak-bundang-202610"
   },
   {
+   "area": "성남 중원",
+   "category": "culture",
+   "end": "2026-11-22",
+   "firstSeen": "2026-11-18T03:19:09Z",
+   "highlight": false,
+   "home": true,
+   "reservation": "무료, 공연 당일 16:00부터 성남아트리움 1층 대극장 티켓박스에서 선착순 배부 (문의 성남예총 031-753-1020)",
+   "reservationOpen": "",
+   "reservationUrl": "",
+   "scope": "local",
+   "start": "2026-11-22",
+   "summary": "11/22(일) 17:00~19:00, 전국학생음악경연대회 입상자 음악회·시상식. 무료, 6세 이상",
+   "title": "2026 유망신예음악회 (제32회 전국학생음악경연대회 입상자 음악회)",
+   "updated": "2026-11-18T03:19:09Z",
+   "url": "https://www.seongnam.go.kr/pm010201/6566",
+   "venue": "성남아트리움 대극장",
+   "id": "sn-promising-newcomer-concert-2026"
+  },
+  {
    "area": "성남 판교",
    "category": "popup",
    "end": "2026-11-15",
@@ -5618,6 +5637,27 @@
    "url": "https://www.instagram.com/p/DfgUM9ykoy0/",
    "venue": "올리브영 두타점 (서울 중구 장충단로 275 두타몰)",
    "id": "store-oliveyoung-doota-lngshot-202611"
+  },
+  {
+   "area": "홍대",
+   "category": "popup",
+   "end": "2026-11-24",
+   "endTBD": false,
+   "eventType": "store",
+   "firstSeen": "2026-11-18T00:00:00Z",
+   "highlight": false,
+   "home": false,
+   "reservation": "예약 없음, 매장 방문",
+   "reservationOpen": "",
+   "reservationUrl": "",
+   "scope": "local",
+   "start": "2026-11-20",
+   "summary": "올리브영 첫 색조 특화 매장 오픈 기념, 2만원 이상 구매 시 8만원 상당 색조 정품 KIT 증정 (11/20–11/24, 매일 선착순 100명)",
+   "title": "올리브영 컬러 그라운드 홍대 그랜드 오픈 이벤트",
+   "updated": "2026-11-18T00:00:00Z",
+   "url": "https://www.instagram.com/p/Df3EHpaEhGP/",
+   "venue": "올리브영 컬러 그라운드 홍대 (서울 마포구 홍익로 20)",
+   "id": "store-oliveyoung-hongdae-colorground-202611"
   },
   {
    "area": "홍대·명동",
@@ -6579,6 +6619,25 @@
    "url": "https://www.yongin.go.kr/user/bbs/BD_selectBbs.do?q_bbsCode=1001&q_clCode=1&q_bbscttSn=20261112095904751",
    "venue": "죽전 중앙근린공원 일대",
    "id": "yi-bojeong-jungsim-culture-festival-2026"
+  },
+  {
+   "area": "용인 처인",
+   "category": "culture",
+   "end": "2026-12-17",
+   "firstSeen": "2026-11-18T03:19:09Z",
+   "highlight": true,
+   "home": true,
+   "reservation": "NOL티켓 예매, 일반 예매 11/20(금) 14:00 오픈. 전일 17시까지 (문의 031-323-6345)",
+   "reservationOpen": "2026-11-20T14:00",
+   "reservationUrl": "https://nol.yanolja.com/ticket/products/26016173",
+   "scope": "local",
+   "start": "2026-12-16",
+   "summary": "12/16(수)~17(목) 19:30 (90분), 중학생 이상. 전석 20,000원, 용인시민·조기예매(~12/4) 50% 할인",
+   "title": "용인시민 만원 조아용! 연극 〈부서진 풍경〉",
+   "updated": "2026-11-18T03:19:09Z",
+   "url": "https://www.yicf.or.kr/main/show/view.do?show_type=perform&viewType=img&SHOW_IDX=17001",
+   "venue": "용인시문예회관 처인홀",
+   "id": "yi-broken-landscape-play-2026"
   },
   {
    "area": "용인",
