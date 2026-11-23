@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-22T23:59:12Z",
+ "generatedAt": "2026-11-23T01:56:24Z",
  "events": [
   {
    "area": "광화문",
@@ -5754,6 +5754,26 @@
    "id": "store-laundryu-seongsu-megastore-202611"
   },
   {
+   "area": "홍대",
+   "category": "popup",
+   "end": "2026-12-02",
+   "endTBD": false,
+   "eventType": "store",
+   "firstSeen": "2026-11-23T01:19:13Z",
+   "highlight": false,
+   "home": false,
+   "reservation": "예약 없음, 매장 방문",
+   "reservationOpen": "",
+   "scope": "local",
+   "start": "2026-11-20",
+   "summary": "11/20~24 2만원 이상 3천원 자동 할인, 11/21~12/2 매일 11~19시 홍대 무신사 매장 3만원 이상 영수증 지참 시 100% 당첨 럭키드로우(최대 50% 쿠폰·핸드크림·선크림 등, 선착순 핫팩), 5만원 이상 추가 할인 택1, 주말 전단지 10% 할인",
+   "title": "무신사 뷰티 홍대 무진장 게릴라 세일·100% 당첨 럭키드로우",
+   "updated": "2026-11-23T01:19:13Z",
+   "url": "https://www.instagram.com/p/Df9T-iToXL5/",
+   "venue": "무신사 뷰티 홍대 (서울 마포구 홍익로 18, B1-3F)",
+   "id": "store-musinsabeauty-hongdae-mujinjang-202611"
+  },
+  {
    "area": "성수",
    "category": "popup",
    "end": "2026-11-17",
@@ -5856,6 +5876,46 @@
    "url": "https://www.instagram.com/p/Dfx6Sb0Enf6/",
    "venue": "올리브영N 성수 (서울 성동구 연무장7길 13)",
    "id": "store-oliveyoung-seongsu-2ndanniv-202611"
+  },
+  {
+   "area": "성수",
+   "category": "popup",
+   "end": "2026-12-03",
+   "endTBD": false,
+   "eventType": "store",
+   "firstSeen": "2026-11-23T01:19:13Z",
+   "highlight": false,
+   "home": false,
+   "reservation": "예약 없음, 매장 방문",
+   "reservationOpen": "",
+   "scope": "local",
+   "start": "2026-11-24",
+   "summary": "앨범 구매 시 미공개 셀피 포토카드 6종 중 1종 랜덤 증정, 현장 QR 응모 시 추첨 6명 친필 사인 폴라로이드. 성수 10~22시, 명동역점 10~22:30",
+   "title": "엔하이픈 THE SIN : PARALLEL WORLD 올리브영 매장 특전 팝업",
+   "updated": "2026-11-23T01:19:13Z",
+   "url": "https://www.instagram.com/p/Df9SIjsksVa/",
+   "venue": "올리브영N 성수 (서울 성동구 연무장7길 13) · 올리브영 명동역점",
+   "id": "store-oliveyoung-seongsu-myeongdong-enhypen-202611"
+  },
+  {
+   "area": "성수",
+   "category": "popup",
+   "end": "2026-11-29",
+   "endTBD": false,
+   "eventType": "store",
+   "firstSeen": "2026-11-23T01:19:13Z",
+   "highlight": false,
+   "home": false,
+   "reservation": "예약 없음, 매장 방문",
+   "reservationOpen": "",
+   "scope": "local",
+   "start": "2026-11-21",
+   "summary": "동아제약·도미나스·리쥬덱스·이지듀 4개 브랜드 존에서 단서 4개 모아 코드 입력 시 어드밴스드 더마 마스터 패키지 증정, 4만원 이상 30%·6만원 이상 40% 장바구니 쿠폰(~11/28), 단일 브랜드 6만원 이상 본품 증정. 매일 11~20시",
+   "title": "올리브영N 성수 SKIN AGENT 더마 미션 팝업 (A.D SKIN LAB)",
+   "updated": "2026-11-23T01:19:13Z",
+   "url": "https://www.instagram.com/p/Df8pWdcEpWz/",
+   "venue": "올리브영N 성수 트렌드팟 (서울 성동구 연무장7길 13)",
+   "id": "store-oliveyoung-seongsu-skinagent-202611"
   },
   {
    "area": "순창",
