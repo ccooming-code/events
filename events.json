@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-24T23:21:35Z",
+ "generatedAt": "2026-11-25T04:12:39Z",
  "events": [
   {
    "area": "광화문",
@@ -6328,6 +6328,26 @@
    "url": "https://www.instagram.com/p/DfgUM9ykoy0/",
    "venue": "올리브영 두타점 (서울 중구 장충단로 275 두타몰)",
    "id": "store-oliveyoung-doota-lngshot-202611"
+  },
+  {
+   "area": "홍대",
+   "category": "popup",
+   "end": "2026-11-30",
+   "endTBD": false,
+   "eventType": "store",
+   "firstSeen": "2026-11-25T02:05:00Z",
+   "highlight": false,
+   "home": false,
+   "reservation": "예약 없음, 매장 방문",
+   "reservationOpen": null,
+   "scope": "local",
+   "start": "2026-11-24",
+   "summary": "EP [SUPERSTAR] 구매 시 미공개 셀피 포토카드 15종 중 1종 랜덤 증정, 팝업 구매자 럭키드로우로 친필사인 포토카드·폴라로이드(각 15장) 즉시 증정",
+   "title": "A2O SOUL EP SUPERSTAR 올리브영 홍대놀이터점 특전 팝업",
+   "updated": "2026-11-25T02:05:00Z",
+   "url": "https://www.instagram.com/p/DgG8HWDkphP/",
+   "venue": "올리브영 홍대놀이터점 (서울 마포구 서교동, 10:00~23:00)",
+   "id": "store-oliveyoung-hongdae-a2osoul-202611"
   },
   {
    "area": "홍대",
